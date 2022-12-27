@@ -11,7 +11,7 @@ const Home = () => {
 //const [idProd,setIdProd] = useState("")
   useEffect(()=>{
   const getData = async()=>{
-    let Data = await axios.get("http://127.0.0.1:9000/api/produit/")
+    let Data = await axios.get("https://productapp.onrender.com/api/produit/")
     //console.log(Data.data.produits)
     setProduits(Data.data.produits)
    }
