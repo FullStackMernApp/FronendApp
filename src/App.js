@@ -1,9 +1,8 @@
-import { BrowserRouter, Route , Switch} from 'react-router-dom';
+import { BrowserRouter, Route ,Routes} from 'react-router-dom';
 import './App.css';
 import AddCategorie from './component/AddCategorie';
 import AddProduit from './component/AddProduit';
 import Home from './component/Home';
-import NavBar from './component/nav';
 import SignIn from './component/SignIn';
 import SignUp from './component/SignUp';
 import WishList from './component/WishList';
@@ -15,14 +14,14 @@ function App() {
     <BrowserRouter>
     <div className="login">
   
-    <Switch>
-       <Route path="/" exact  ><SignIn/></Route>
-    <Route path="/signUp"><SignUp/></Route>
-    <Route path='/AddProduit'><AddProduit />  </Route>
-    <Route path='/AddCategorie'><AddCategorie /></Route>
-    <Route path='/WishList'><WishList /></Route>
-    <Route  path="/Home" ><Home/></Route>
-    </Switch>
+<Routes>
+       <Route path="/" exact element={<SignIn/>} />
+    <Route path="/signUp" element={<SignUp/>}/>
+    <Route path='/AddProduit' element={<AddProduit /> }/> 
+    <Route path='/AddCategorie' element={<AddCategorie />}/>
+    <Route path='/WishList' element={<WishList />}/>
+    <Route  path="/Home" element={<Home/>} />
+    </Routes>
     </div>
   </BrowserRouter>
   )

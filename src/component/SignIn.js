@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useHistory,Link } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 const SignIn = () => {
   ///signin using Local storage
@@ -9,14 +9,14 @@ const SignIn = () => {
     const signIn = localStorage.getItem("SignIn")
     const localEmail = localStorage.getItem("email")
     const localPassword = localStorage.getItem("password")
-    const history = useHistory()
+    const history = useNavigate()
   useEffect(()=>{
 if(signIn){
 setShowHome(true)
 
 }
 if(showHome){
- history.push('/Home')
+ history('/Home')
 }
   })
     const handelClick = () =>{

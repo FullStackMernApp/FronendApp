@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useHistory,Link } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import './signUp.css'
 const SignUp = () => {
@@ -7,7 +7,7 @@ const SignUp = () => {
     const password = useRef()
     const [showHome,setShowHome] = useState(false)
     const localSignUp = localStorage.getItem("SignUp")
-    const history = useHistory()
+    const history = useNavigate()
     useEffect(()=>{
      if (localSignUp){
         setShowHome(true)
