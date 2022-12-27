@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom"
+
 import axios from "axios"
 import { useEffect, useState } from "react"
 import './home.css'
 import NavBar from "./nav"
 import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Row } from "reactstrap"  
 const Home = () => {
-  const history = useNavigate()
+
   const [produits,setProduits] = useState([])
   //const [color,setColor] = useState("")
 //const [idProd,setIdProd] = useState("")

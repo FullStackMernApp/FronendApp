@@ -13,7 +13,7 @@ const SignUp = () => {
         setShowHome(true)
      }
      if(showHome){
-        history.push('/Home')
+        history('/Home')
        }
     })
     const handelClick = () =>{
